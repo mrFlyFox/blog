@@ -1,0 +1,313 @@
+@import "reset"
+$color-main:    #666666 
+$color-hover:   #5bc8a3
+$color-line:    #d4d4d4
+$color-a:       #999999
+$color-main-bg: #dfdfdf
+$color-text:    #777777
+@mixin text-bold
+	font:
+		family: 'Open Sans'
+		weight: bold
+		size: 26px
+	line-height: 36px
+@mixin text-regular
+	font:
+		family: 'Open Sans'
+		weight: normal
+		size: 16px
+	line-height: 1.8em
+body
+	background-color: #fff
+header
+	border-bottom: 2px solid #f2f2f2
+.mid
+	width: 1200px
+	height: auto
+	margin: 0 auto	
+.social
+	float: left
+	width: 500px
+#svg-source
+	position: absolute
+	top: -9999px
+	width: 0px
+	height: 0px
+.icons
+	fill: #c3c3c3
+	.icon:hover
+		transition: 0.2s
+		fill: black
+.icon
+	display: inline-block
+	width: 35px
+	height: 35px
+	margin: 0 5px
+	list-style-type: none
+	
+#youtube, #vk, #facebook, #google-plus, #search
+	display: block
+	width: 35px
+	height: 35px
+	background-size: auto 100%
+
+	transform: scale(.37)
+	&#facebook, &#google-plus
+		transform: scale(.15)
+	&#search
+		transform: scale(.55)
+.logo
+	@include text-bold
+	font-size: 46px
+	width: 150px
+	height: 150px
+	line-height: 150px
+	margin: 0 auto
+// Поисковая строка+++++++++++++++++
+.search
+	float: right
+	position: relative
+	width: 250px
+	height: 35px
+
+.submit
+	position: absolute
+	right: 0
+	width: 35px
+	height: 37px
+	border: none
+	background: none
+	background-image: url(../img/search.png)
+	cursor: pointer
+.input
+	height: 35px
+	width: 200px
+	position: absolute
+	border: none
+	border-bottom: 1px #c3c3c3 solid
+	outline: none
+	@include text-regular
+	font-size: 18px
+	color: $color-text
+	margin-left: 15px
+
+
+.display-none
+	display: none
+
+
+
+
+.line
+	width: 100%
+	height: 50px
+	border-bottom: 1px solid $color-line
+nav > ul
+	width: 450px
+	height: 100px
+	line-height: 100px
+	margin: 0 auto
+
+nav > ul > li
+	display: inline-block
+	padding: 0 10px
+nav > ul > li > a
+	@include text-bold
+	text-decoration: none
+	font-size: 20px
+	color: $color-a
+nav > ul > li > a:hover
+	color: $color-main
+
+// ОСНОВНОЙ БЛОК
+
+.main
+	width: 100%
+	height: 1500px
+	background-color: $color-main-bg
+	padding-top: 50px
+
+.content
+	width: 75%
+	float: left
+
+		
+.article
+	width: 900px
+	height: 350px
+	background-color: #fff
+	float: left
+	margin-bottom: 50px
+
+
+
+
+.article article
+	width: 450px
+	height: 315px
+	float: right
+	padding: 20px 25px 15px 25px
+	position: relative
+	
+
+article a
+	text-decoration: none
+
+article h1
+	@include text-bold
+	margin-bottom: 15px
+	color: $color-main
+	&:hover
+		color: $color-main - 30 
+article p
+	@include text-regular
+	color: $color-text	
+	text-align: justify
+	width: 450px
+	height: 175px
+	overflow: hidden
+article time
+	display: inline
+	@include text-regular
+	color: $color-text
+	font-size: 12px
+	float: right
+.comment
+	display: inline-block
+	height: 30px
+	width:  30px
+	margin-top: 30px
+.comment svg
+	width: 30px
+	height: 30px
+
+#comment
+	height: 22px
+	width:  30px
+	transform: scale(.40)
+	
+.tags
+	display: inline-block
+	width: 275px
+	margin-left: 30px
+
+.comment-count, .tags
+	display: inline-block
+	
+	position: absolute
+	bottom: 13px
+.comment-count, .tag
+	@include text-regular
+	color: $color-text
+.tag
+	background-color: $color-main-bg
+	padding: 0 3px
+	&:hover
+		background-color: $color-main-bg + 15
+		transition: .2s
+
+//       SIDEBAR
+.sidebar
+	float: right
+.block1
+	width: 190px
+	height: 250px
+	background-color: #fff
+	padding: 20px 30px 10px 30px
+.block1 h1
+	@include text-bold
+	fon-size: 24pt
+	color: $color-text
+	padding-left: 3px
+.block1 a
+	text-decoration: none
+
+.subscribe
+	width: 250px
+	height: 350px
+	background: #fff
+	margin-top: 50px
+.bg-img
+	width: 250px
+	height: 175px
+	background-image: url(../img/Subscribe.png)
+
+#subscribe-form
+	width: 190px
+	height: 100px
+	margin: auto 
+	margin-top: 30px
+
+#btn
+	width: 190px
+	height: 30px
+	background-color: #999999
+	border: none
+	@include text-bold
+	font-size: 18px
+	color: #fff
+	text-align: center
+	line-height: 30px
+	cursor: pointer
+
+#txt
+	width: 178px
+	height: 30px
+	margin-bottom: 10px
+	padding: 0 5px
+	border: 1px solid #d3d3d3
+	@include text-regular
+	font-size: 16px
+	text-align: center
+
+//  Кнопки навигации
+.arrows
+	display: inline-block
+	width: 700px
+	height: 50px
+	position: relative
+	margin-left: 100px
+
+.arrow
+	display: inline-block
+	width: 210px
+	text-decoration: none
+	@include text-bold
+	color: $color-a
+	&:hover
+		color: $color-hover
+		transition: .2s
+.prew
+	background: #fff url(../img/Arrow-prew.png) no-repeat 30px 9px
+	padding-left: 120px
+	height: 50px
+	line-height: 50px
+	&:hover 
+		background: #fff url(../img/Arrow-prew-hover.png) no-repeat 30px 9px
+.next
+	background: #fff url(../img/Arrow-next.png) no-repeat 230px 9px
+	width: 300px
+	padding-left: 30px
+	height: 50px
+	line-height: 50px
+	margin-left: 35px
+	&:hover 
+		background: #fff url(../img/Arrow-next-hover.png) no-repeat 230px 9px
+
+footer
+	height: 50px
+	background-color: #fff
+	text-align: center
+footer p, footer a
+ @include text-regular
+ font-size: 16px
+ line-height: 50px
+ color: $color-a
+footer a:hover
+	color: $color-hover
+
+
+
+
+
+
